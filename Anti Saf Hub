@@ -94,6 +94,13 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Button = Tab:CreateButton({
+   Name = "Redz hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
+   end,
+})
+
 local Tab = Window:CreateTab("🐟 Fisch 🐟", nil) -- Title, Image
 local Section = Tab:CreateSection("Scripts")
 
