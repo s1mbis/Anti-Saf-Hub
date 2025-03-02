@@ -1,0 +1,69 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "🐇 Anti Saf Hub 🐇",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Please wait",
+   LoadingSubtitle = "by Simbis",
+   Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = AntiSafHub, -- Create a custom folder for your hub/game
+      FileName = "universal"
+   },
+
+   Discord = {
+      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "QdRagbyG", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Welcome to Anti Saf Hub",
+      Subtitle = "",
+      Note = "October 24 2024 We Made Saf Run For there Lifes  ", -- Use this to tell the user how to get a key
+      FileName = "key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"gamo to saf"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("🌲 Lt2 🌲",nil) -- Title, Image
+local Section = Tab:CreateSection("Scripts")
+
+local Button = Tab:CreateButton({
+   Name = "Butter hub (requires key)",
+   Callback = function()
+   loadstring(game:HttpGet([[https://raw.githubusercontent.com/kode-sec/Butter/refs/heads/main/main.lua]]))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Kron Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/DevKron/Kron_Hub/refs/heads/main/version_1.0'))("")
+   end,
+})
+
+local Tab = Window:CreateTab("🥷 Op ninja Sim 🥷", nil) -- Title, Image
+local Section = Tab:CreateSection("Scripts")
+
+local Button = Tab:CreateButton({
+   Name = "Farming",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/AppleScript001/Strong-Ninja-Simulator/main/README.md'),true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "farming & killing (need key)",
+   Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Sicalelak/Sicalelak/refs/heads/main/OP%20NINJA%20AUTOKILL"))()
+   end,
+})
